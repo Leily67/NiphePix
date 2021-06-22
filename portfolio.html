@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<!-- Site crée par Colette OSWALD -->
+<html lang="fr">
+
+<head>
+        <!-- TITRE ET BASE -->
+        <title>NIPHE PIX</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Colette OSWALD" lang="fr">
+        <link rel="stylesheet" type="text/css" href="stylesheet/main.css">
+</head>
+
+<body>
+        <!-- NAVIGATION -->
+        <header>
+                <nav>
+                        <ul class="navigation">
+                                <li><a href="Index.html">Home</a></li>
+                                <li><a href="portfolio.html">Portfolio</a></li>
+                                <li><a href="bio.html">Bio</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                </nav>
+        </header>
+        <!-- PORTFOLIO -->
+        <div class="based">
+                <img class=img-responsive src="images/porfolio.png" alt="titre">
+        </div>
+        <div id="myModal" class="modal">
+                <span id="close">&times;</span>
+                <img class="modal-content" id="img01">
+                <div id="caption"></div>
+        </div>
+        <div class="gallery">
+                <img class="myImg" src="images/Divers/_MG_4814.jpg"
+                        alt="Cathédrale de Strasbourg - Illumination Nocturne 2019"
+                        style="height: 400px; width: 300px;">
+                <img class="myImg" src="images/Divers/_MG_4820.jpg"
+                        alt="Cathédrale de Strasbourg - Illumination Nocturne 2019"
+                        style="height: 400px; width: 300px;">
+                <img class="myImg" src="images/Divers/_MG_4946.jpg" alt="Cathédrale de Metz - 2020"
+                        style="height: 400px; width: 300px;">
+                <img class="myImg" src="images/Divers/_MG_4959.jpg"
+                        alt="Cathédrale de Strasbourg - Illumination Nocturne 2020"
+                        style="height: 400px; width: 300px;">
+                <img class="myImg" src="images/Divers/_MG_4969.jpg"
+                        alt="Cathédrale de Strasbourg - Illumination Nocturne 2020"
+                        style="height: 400px; width: 300px;">
+                <img class="myImg" src="images/Nature/_MG_44801.jpg" alt="Couché de Soleil"
+                        style="height: 400px; width: 300px;">
+                <img class="myImg" src="images/Nature/_MG_44841.jpg" alt="Couché de Soleil"
+                        style="height: 400px; width: 300px;">
+                <img class="myImg" src="images/Convention/_MG_4317.jpg" alt="Bloddy Week-end 2019 - Audincourt"
+                        style="height: 400px; width: 300px;">
+                <img class="myImg" src="images/Convention/_MG_4449.jpg" alt="Bloddy Week-end 2019 - Audincourt"
+                        style="height: 400px; width: 300px;">
+                <img class="myImg" src="images/Convention/_MG_4452.jpg" alt="Bloddy Week-end 2019 - Audincourt"
+                        style="height: 400px; width: 300px;">
+                <img class="myImg" src="images/Convention/_MG_4570.jpg" alt="Necronomi'con 2019 - Belfort"
+                        style="height: 400px; width: 300px;">
+                <img class="myImg" src="images/Convention/_MG_4624.jpg" alt="Necronomi'con 2019 - Belfort"
+                        style="height: 400px; width: 300px;">
+                <img class="myImg" src="images/Convention/_MG_4657.jpg" alt="Necronomi'con 2019 - Belfort"
+                        style="height: 400px; width: 300px;">
+                <img class="myImg" src="images/Convention/_MG_4772.jpg" alt="Necronomi'con 2019 - Belfort"
+                        style="height: 400px; width: 300px;">
+                <img class="myImg" src="images/Billards/_MG_4093.jpg"
+                        alt="Blackball - Secteur Ligue Grand Est 2019 - Saint-Nabord"
+                        style="height: 400px; width: 300px;">
+                <img class="myImg" src="images/Billards/_MG_4137.jpg"
+                        alt="Blackball - Secteur Ligue Grand Est 2019 - Saint-Nabord"
+                        style="height: 400px; width: 300px;">
+                <img class="myImg" src="images/Billards/_MG_4153.jpg"
+                        alt="Blackball - Secteur Ligue Grand Est 2019 - Saint-Nabord"
+                        style="height: 400px; width: 300px;">
+                <img class="myImg" src="images/Billards/_MG_4186.jpg"
+                        alt="Blackball - Secteur Ligue Grand Est 2019 - Saint-Nabord"
+                        style="height: 400px; width: 300px;">
+                <img class="myImg" src="images/Billards/_MG_4223.jpg"
+                        alt="Blackball - Secteur Ligue Grand Est 2019 - Saint-Nabord"
+                        style="height: 400px; width: 300px;">
+                <img class="myImg" src="images/Billards/_MG_4507.jpg" alt="Blackball - Coupe Indiv Alsace 2019"
+                        style="height: 400px; width: 300px;">
+                <img class="myImg" src="images/Billards/_MG_4528.jpg" alt="Blackball - Coupe Indiv Alsace 2019"
+                        style="height: 400px; width: 300px;">
+                <!-- PIED DE PAGE -->
+                <p id="footer">&copy; Niphé Pix 2021 - Tous droits réservés</p>
+                <!-- SCRIPT -->
+                <script>
+                        let modal = document.getElementById("myModal");
+                        let imgs = document.getElementsByClassName("myImg");
+                        let modalImg = document.getElementById("img01");
+                        let captionText = document.getElementById("caption");
+                        let span = document.getElementById("close");
+
+                        for (i = 0, len = imgs.length; i < len; i++) {
+                                imgs[i].onclick = function () {
+                                        modal.style.display = "block";
+                                        modalImg.src = this.src;
+                                        captionText.innerHTML = this.alt;
+                                }
+                        }
+                        span.onclick = function () {
+                                modal.style.display = "none";
+                        }
+                </script>
+</body>
+
+</html>
